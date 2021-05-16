@@ -65,7 +65,7 @@ html {
   cursor: pointer;
 }
 
-#adv-text {
+#moretoolsbutton {
   background-color: #202224;
   padding: 15px;
   padding-top: -30px;
@@ -76,7 +76,7 @@ html {
   margin-bottom: 35px;
 }
 
-#adv {
+#moretools {
   display: none;
   margin-bottom: 35px;
 }
@@ -148,12 +148,12 @@ resize: none;
         var Grid = [];
 
         function showadv() {
-          var adv = document.getElementById("adv");
-          if (adv.style.display === "block") {
-            adv.style.display = "none";
+          var adv = document.getElementById("moretools");
+          if (moretools.style.display === "block") {
+            moretools.style.display = "none";
             document.getElementById("arrow").style.transform = "rotate(0deg)";
           } else {
-            adv.style.display = "block";
+            moretools.style.display = "block";
             document.getElementById("arrow").style.transform = "rotate(180deg)";
           }
         }
@@ -372,7 +372,7 @@ resize: none;
       <input class="solveButton" type="button" value="Solve Pairs" onclick="SolveNumberPairs()"/>
       <input class="solveButton" type="button" value="Solve Trios" onclick="SolveNumberTrios()"/>
     </div>
-    <table id="adv-text" onclick="showadv()">
+    <table id="moretoolsbutton" onclick="showadv()">
       <tr>
         <td>
           <h3>Advanced Tools </h3>
@@ -381,7 +381,7 @@ resize: none;
         </td>
       </tr>
     </table>
-    <div id="adv">
+    <div id="moretools">
       <input class="solveButton" type="button" value="Solve Once" onclick="SolvePuzzle()"/>
       <input class="solveButton" type="button" value="Complete Lines" onclick="CompleteRowsCols()"/>
       <input class="solveButton" type="button" value="Solve Row Pairs" onclick="SolveRowPairs()"/>
