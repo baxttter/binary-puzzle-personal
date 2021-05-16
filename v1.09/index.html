@@ -3,6 +3,7 @@
 <head>
   <title>Binary Puzzle</title>
   <link rel="stylesheet" href="main.css">
+  <link rel="shortcut icon" href="https://baxttter.github.io/binary-puzzle/favicon.png"/>
 </head>
 <style>
 
@@ -128,7 +129,21 @@
             DisplayGrid(Grid);
         }
         function SolveColPairs() { // Similar to column pairs
-            window.alert('SolveColPairs has not been coded yet');
+            var GridSize = 6;
+            for (let Col = 0; Col < GridSize; Col++) {
+              for (let Row = 0; Row < GridSize - 1; Row++) {
+                if (Grid[Row][Col] !== null && Grid[Row][Col] == Grid[Row + 1][Col]) {
+                  if (Row > 0) {
+                    Grid[Row - 1][Col] = (1 - Grid[Row][Col]);
+                  }
+                  if (Row < GridSize - 2) {
+                    Grid[Row + 2][Col] = (1 - Grid[Row][Col]);
+                  }
+                }
+              }
+            }
+            document.getElementById('arrayView2D').value = Grid[0];
+            DisplayGrid(Grid);
         }
         function SolveNumberTrios() {
             window.alert('SolveNumberTrios has not been coded yet');
@@ -141,6 +156,7 @@
 <body onload="loadGrid(GT)">
     <form id="input">
   <h1>Binary Puzzle</h1>
+        <a href = "https://baxttter.github.io/binary-puzzle/">Back to Homepage</a>
   <h2>v1.09</h2>
   <br></br>
 
