@@ -39,6 +39,7 @@ html {
 }
 
 .gameboard {
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
   background-color: transparent;
 }
 
@@ -54,6 +55,7 @@ html {
   margin: 10px;
   font-weight: bold;
   font-size: 20px;
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
 }
 
 .solveButton:hover {
@@ -63,6 +65,7 @@ html {
   transform: scale(1.04);
   color: white;
   cursor: pointer;
+  box-shadow: 0px 9px 20px 2px rgba(0,0,0,0.2);
 }
 
 #moretoolsbutton {
@@ -74,6 +77,7 @@ html {
   margin-top: 20px;
   margin-bottom: 20px;
   margin-bottom: 35px;
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
 }
 
 #moretools {
@@ -106,6 +110,7 @@ select {
   appearance: none;
   outline: none;
   font-size: 18px;
+  box-shadow: 0px 6px 10px rgba(0,0,0,0.2);
 }
 
 textarea {
@@ -217,7 +222,7 @@ resize: none;
 
         function SolveFinal() {
           BinaryPuzzleSolver();
-          setTimeout(CannotSolveAlert,1);
+          setTimeout(CannotSolveAlert,2);
         }
         function SolvePuzzle(G2D) { //See structure chart for what goes here
             SolveNumberPairs();
