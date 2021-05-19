@@ -105,7 +105,7 @@
         }
         function BinaryPuzzleSolver() {
             var notpos = 0;
-            var hep = Grid.length; //Code the top level module here
+            var yep = Grid.length; //Code the top level module here
             for (let repeat = 0; repeat < 8; repeat++) {
               SolvePuzzle();
             }
@@ -120,7 +120,7 @@
               }
             }
             if (notpos == 1) {
-              alert("Couldn't solve puzzle!");
+              alert("Couldn't solve puzzle!"); // Only shown if found null in puzzle
             }
         }
 
@@ -137,7 +137,7 @@
               return false;
             }
         }
-        function SolveNumberPairs() { // call row and column
+        function SolveNumberPairs() { // call rowpairs and colpairs in one function
             SolveRowPairs();
             SolveColPairs();
         }
